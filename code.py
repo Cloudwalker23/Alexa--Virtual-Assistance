@@ -58,6 +58,10 @@ def run_alexa():
         talk('I am in a relationship with wifi')
     elif 'joke' in command:
         talk(pyjokes.get_jokes())
+    elif 'screenshot' in command:
+        img=pyscreenshot.grab()
+        img.show()
+        img.save("screenshot")
     else:
         talk('Please say the command again')
 
